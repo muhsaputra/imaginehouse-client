@@ -3,7 +3,7 @@ import Navbar from "@/components/layout/NavigationBar";
 import BreadcrumbSection from "@/components/common/BreadCrumbs";
 import ImagineHouseProductSection from "@/components/sections/ImagineHouseProductSection";
 import { LayoutGridDemo } from "@/components/sections/galleryPortfolio";
-import { client } from "@/src/sanityClient";
+import { client } from "@/src/SanityClient.js";
 import Faqs from "@/components/sections/Faqs";
 import Footer from "@/components/layout/Footer";
 import Loading from "@/components/common/Loading";
