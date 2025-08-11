@@ -1,4 +1,25 @@
-# Logs
+# =============================
+# ENVIRONMENT VARIABLES
+# =============================
+.env
+.env.*
+!.env.example   # Kecuali file contoh env
+
+# =============================
+# DEPENDENCIES
+# =============================
+node_modules/
+
+# =============================
+# BUILD OUTPUT
+# =============================
+dist/
+dist-ssr/
+.vercel/
+
+# =============================
+# LOG FILES
+# =============================
 logs
 *.log
 npm-debug.log*
@@ -7,20 +28,31 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-.env
+# =============================
+# SANITY STUDIO
+# =============================
+.sanity/
+.sanity/*
 
-# Editor directories and files
+# Compiled Sanity Studio
+/studio/dist
+
+# =============================
+# EDITOR / SYSTEM FILES
+# =============================
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
+# =============================
+# TESTING / COVERAGE
+# =============================
+coverage/
+*.tsbuildinfo
