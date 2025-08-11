@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-6 lg:py-10 text-center text-white">
         <div className="flex flex-col items-center">
           <img
-            src="/public/AlternativeWhite.png" // Ganti dengan path logo Imagine House
+            src="./public/AlternativeWhite.png" // Ganti dengan path logo Imagine House
             className="h-10 mb-3"
             alt="Imagine House Logo"
           />
