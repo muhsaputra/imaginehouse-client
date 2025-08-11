@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { client } from "@/sanityClient";
+import { client } from "@/src/sanityClient";
 import NavigationBar from "@/components/layout/NavigationBar";
 import BreadcrumbSection from "@/components/common/BreadCrumbs";
 import Loading from "@/components/common/Loading";
