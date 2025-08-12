@@ -20,7 +20,7 @@ import VideoProductionPage from "@/pages/Services/VideoProductionPage";
 import FilmProduction from "@/pages/Services/FilmProduction";
 
 // Dashboard / Login Page
-import LoginPage from "@/dashboard/LoginPage";
+import LoginPage from "@/dashboard/pages/Login";
 
 function PageWrapper({ children }) {
   return (
