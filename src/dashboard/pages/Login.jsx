@@ -2,7 +2,7 @@ import { LoginForm } from "@/components/login-form";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { clearAllUserErrors, login } from "@/store/slices/userSlice";
+import { clearAllUserErrors, login } from "@dashboard/store/slices/userSlice";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion, AnimatePresence } from "framer-motion";
