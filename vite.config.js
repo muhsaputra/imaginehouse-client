@@ -17,6 +17,13 @@ export default defineConfig({
     host: true,
     // ini penting untuk React Router agar tidak 404 saat refresh
     historyApiFallback: true,
+    proxy: {
+      "/api": {
+        target: "https://imaginehouse-backend-production.up.railway.app",
+        changeOrigin: true,
+        secure: false,
+      },
+    },
   },
   preview: {
     port: 4173,
