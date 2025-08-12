@@ -1,9 +1,9 @@
 import { cn } from "@/lib/utils";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import { Label } from "../components/ui/label";
+import { Input } from "../components/ui/input";
+import { Button } from "../components/ui/button";
 import { Link } from "react-router-dom";
-import SpecialLoadingButton from "@/pages/sub-components/specialLoadingButton";
+import SpecialLoadingButton from "../pages/sub-components/SpecialLoadingButton";
 
 export function LoginForm({
   className,
