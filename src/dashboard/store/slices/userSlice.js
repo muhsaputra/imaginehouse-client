@@ -20,7 +20,7 @@ export const login = (email, password) => async (dispatch) => {
   dispatch(userSlice.actions.loginRequest());
   try {
     const { data } = await axios.post(
-      `${API_BASE_URL}api/v1/user/login`,
+      `${API_BASE_URL}/api/v1/user/login`,
       { email, password },
       {
         withCredentials: true,
