@@ -19,6 +19,9 @@ import FotografiPage from "@/pages/Services/FotografiPage";
 import VideoProductionPage from "@/pages/Services/VideoProductionPage";
 import FilmProduction from "@/pages/Services/FilmProduction";
 
+// Dashboard / Login Page
+import LoginPage from "@/dashboard/LoginPage";
+
 function PageWrapper({ children }) {
   return (
     <motion.div
@@ -121,6 +124,17 @@ function AnimatedRoutes() {
           }
         />
 
+        {/* Tambahan: Login Dashboard */}
+        <Route
+          path="/login"
+          element={
+            <PageWrapper>
+              <LoginPage />
+            </PageWrapper>
+          }
+        />
+
+        {/* 404 */}
         <Route
           path="*"
           element={
