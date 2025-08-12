@@ -55,7 +55,7 @@ export function LoginForm({
         ) : (
           <Button
             type="submit"
-            className="w-full hover:bg-[#721419] bg-[#841618]"
+            className="w-full text-white hover:bg-[#721419] bg-[#841618]"
           >
             Login
           </Button>
