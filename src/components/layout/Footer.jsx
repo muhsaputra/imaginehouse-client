@@ -2,12 +2,12 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#841618] dark:bg-[#5c1011]">
+    <footer className="bg-[#841618] dark:bg-[#5c1011] mt-48">
       <div className="mx-auto w-full max-w-screen-xl p-6 lg:py-10 text-center text-white">
         <div className="flex flex-col items-center">
           <img
             src="/AlternativeWhite.png"
-            className="h-10 mb-3"
+            className="h-10 mb-7 "
             alt="Imagine House Logo"
           />
           <p className="text-gray-200 max-w-lg mb-6 text-sm">

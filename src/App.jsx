@@ -4,15 +4,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import Loading from "@/components/common/Loading";
 
 // Pages frontend utama
-import HomePage from "@/pages/Home/HomePage";
-import AboutPage from "@/pages/About/AboutPage";
-import ServicePage from "@/pages/Services/ServicePage";
-import PortfolioPage from "@/pages/Portfolio/PortfolioPage";
-import ContactPage from "@/pages/Contact/ContactPage";
-import NotFoundPage from "@/pages/NotFound/NotFoundPage";
-import BlogPage from "@/pages/Blog/BlogPage";
+import HomePage from "@/pages/home/HomePage";
+import AboutPage from "@/pages/about/AboutPage";
+import ServicePage from "@/pages/services/ServicePage";
+import PortfolioPage from "@/pages/portfolio/PortfolioPage";
+import ContactPage from "@/pages/contact/ContactPage";
+import NotFoundPage from "@/pages/notFound/NotFoundPage";
+import BlogPage from "@/pages/Blog/blogPage";
 import StudioRedirect from "./Studio";
-import BlogDetail from "@/pages/Blog/BlogDetail";
+import BlogDetail from "@/pages/blog/BlogDetail";
 
 // Services subpages
 import FotografiPage from "@/pages/Services/FotografiPage";
