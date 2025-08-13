@@ -5,11 +5,17 @@ import axios from "axios";
 const API_BASE_URL =
   import.meta.env.VITE_API_URL || "http://localhost:4000/api/v1";
 
+// Set axios default Authorization jika token ada
+const tokenFromStorage = localStorage.getItem("accessToken");
+if (tokenFromStorage) {
+  axios.defaults.headers.common["Authorization"] = `Bearer ${tokenFromStorage}`;
+}
+
 const initialState = {
   loading: false,
   user: {},
-  token: localStorage.getItem("accessToken") || null,
-  isAuthenticated: false,
+  token: tokenFromStorage || null,
+  isAuthenticated: !!tokenFromStorage,
   error: null,
   message: null,
   isUpdated: false,
@@ -55,15 +61,11 @@ export const getUser = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const token = localStorage.getItem("accessToken");
+      if (!token) return rejectWithValue("No token found!");
 
-      if (!token) {
-        return rejectWithValue("No token found!");
-      }
+      axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
 
-      const { data } = await axios.get(`${API_BASE_URL}/api/v1/user/me/`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
+      const { data } = await axios.get(`${API_BASE_URL}/user/me`, {
         withCredentials: true,
       });
 
@@ -181,15 +183,12 @@ const userSlice = createSlice({
 
     loadUserRequest(state) {
       state.loading = true;
-      state.isAuthenticated = false;
-      state.user = {};
       state.error = null;
     },
     loadUserSuccess(state, action) {
       state.loading = false;
       state.isAuthenticated = true;
       state.user = action.payload;
-      state.error = null;
     },
     loadUserFailed(state, action) {
       state.loading = false;
@@ -199,12 +198,7 @@ const userSlice = createSlice({
     },
 
     logoutSuccess(state, action) {
-      state.loading = false;
-      state.isAuthenticated = false;
-      state.user = {};
-      state.token = null;
-      state.error = null;
-      state.message = action.payload;
+      return { ...initialState, message: action.payload };
     },
     logoutFailed(state, action) {
       state.loading = false;
@@ -221,7 +215,6 @@ const userSlice = createSlice({
       state.loading = false;
       state.isUpdated = true;
       state.message = action.payload;
-      state.error = null;
     },
     updatePasswordFailed(state, action) {
       state.loading = false;
@@ -240,7 +233,6 @@ const userSlice = createSlice({
       state.loading = false;
       state.isUpdated = true;
       state.message = action.payload;
-      state.error = null;
     },
     updateProfileFailed(state, action) {
       state.loading = false;
@@ -249,9 +241,9 @@ const userSlice = createSlice({
       state.error = action.payload;
     },
     updateProfileResetAfterUpdate(state) {
-      state.error = null;
       state.isUpdated = false;
       state.message = null;
+      state.error = null;
     },
 
     clearAllErrors(state) {
@@ -262,7 +254,6 @@ const userSlice = createSlice({
     builder
       .addCase(getUser.pending, (state) => {
         state.loading = true;
-        state.error = null;
       })
       .addCase(getUser.fulfilled, (state, action) => {
         state.loading = false;
