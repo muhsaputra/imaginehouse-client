@@ -60,7 +60,7 @@ export const getUser = createAsyncThunk(
         return rejectWithValue("No token found!");
       }
 
-      const { data } = await axios.get(`${API_BASE_URL}/user/me`, {
+      const { data } = await axios.get(`${API_BASE_URL}/api/v1/user/me/`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -79,7 +79,7 @@ export const getUser = createAsyncThunk(
 // Thunk: logout
 export const logout = () => async (dispatch) => {
   try {
-    const { data } = await axios.get(`${API_BASE_URL}/user/logout`, {
+    const { data } = await axios.get(`${API_BASE_URL}/api/v1/user/logout`, {
       withCredentials: true,
     });
 
