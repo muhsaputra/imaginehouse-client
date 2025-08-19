@@ -39,14 +39,7 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         {/* Halaman frontend utama */}
-        <Route
-          path="/"
-          element={
-            <PageWrapper>
-              <HomePage />
-            </PageWrapper>
-          }
-        />
+        <Route path="/" element={<PageWrapper></PageWrapper>} />
         <Route
           path="/about"
           element={
