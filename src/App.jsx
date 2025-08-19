@@ -4,7 +4,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import Loading from "@/components/common/Loading.jsx";
 
 // Pages frontend utama
-// import HomePage from "@/pages/home/HomePage.jsx";
 import AboutPage from "@/pages/about/AboutPage.jsx";
 import ServicePage from "@/pages/services/ServicePage.jsx";
 import PortfolioPage from "@/pages/portfolio/PortfolioPage.jsx";
