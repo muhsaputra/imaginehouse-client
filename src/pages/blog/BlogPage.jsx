@@ -9,6 +9,7 @@ export default function BlogPage() {
   useEffect(() => {
     document.title = "Imagine House | Blog";
   }, []);
+
   return (
     <>
       {/* Navbar */}

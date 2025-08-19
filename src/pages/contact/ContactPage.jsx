@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Faqs from "@/components/sections/Faqs";
 import Footer from "@/components/layout/Footer";
 import Loading from "@/components/common/Loading";
+import SkeletonBreadcrumb from "@/components/common/SkeletonBreadcrumb";
 
 export default function ContactPage() {
   const [data, setData] = useState(null);
@@ -33,7 +34,7 @@ export default function ContactPage() {
   if (!data)
     return (
       <>
-        <Loading />
+        <SkeletonBreadcrumb />
       </>
     );
 
