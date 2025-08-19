@@ -5,7 +5,8 @@ import BreadcrumbSection from "@/components/common/BreadCrumbs";
 import Fitures from "@/components/sections/Fitures";
 import Faqs from "@/components/sections/Faqs";
 import Footer from "@/components/layout/Footer";
-import Loading from "@/components/common/Loading";
+import SkeletonAbout from "@/components/common/SkeletonAbout";
+import SkeletonBreadcrumb from "@/components/common/SkeletonBreadcrumb";
 
 export default function AboutPage() {
   const [data, setData] = useState(null);
@@ -35,12 +36,17 @@ export default function AboutPage() {
       .catch((err) => console.error("Sanity fetch error:", err));
   }, []);
 
-  if (!data)
+  // Loading state pakai skeleton
+  if (!data) {
     return (
       <>
-        <Loading />
+        <Navbar />
+        <SkeletonBreadcrumb />
+        <SkeletonAbout />
+        <Footer />
       </>
     );
+  }
 
   return (
     <>
