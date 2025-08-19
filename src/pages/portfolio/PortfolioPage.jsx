@@ -8,6 +8,8 @@ import { VelocityScroll } from "@/components/magicui/VelocityScroll";
 import { client } from "../../sanityClient";
 import Footer from "@/components/layout/Footer";
 import Loading from "@/components/common/Loading";
+import SkeletonServicePage from "@/components/common/SkeletonServicePage";
+import SkeletonBreadcrumb from "@/components/common/SkeletonBreadcrumb";
 
 export default function PortfolioPage() {
   const [portfolio, setPortfolio] = useState([]);
@@ -90,7 +92,8 @@ export default function PortfolioPage() {
   if (!data)
     return (
       <>
-        <Loading />
+        <SkeletonBreadcrumb />
+        <SkeletonServicePage />;
       </>
     );
 
