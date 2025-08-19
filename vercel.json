@@ -2,7 +2,7 @@
   "redirects": [
     {
       "source": "/login",
-      "destination": "https://imaginehouse-dashboard.vercel.app/login",
+      "destination": "https://imaginehouse-dashboard.vercel.app/",
       "permanent": false
     },
     {
