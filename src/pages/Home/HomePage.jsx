@@ -12,7 +12,7 @@ import Faqs from "@/components/sections/Faqs";
 import Footer from "@/components/layout/Footer";
 import BlogSection from "@/components/sections/BlogSection";
 
-export default function Home() {
+export default function HomePage() {
   useEffect(() => {
     document.title = "Imagine House | Rumahnya Cerita Visual Kamu";
   }, []);

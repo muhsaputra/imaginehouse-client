@@ -4,20 +4,20 @@ import { AnimatePresence, motion } from "framer-motion";
 import Loading from "@/components/common/Loading";
 
 // Pages frontend utama
-import HomePage from "./pages/home/HomePage.jsx";
+import HomePage from "@/pages/home/HomePage"; // ✅ pastikan file benar2 ada di: src/pages/home/HomePage.jsx
 import AboutPage from "@/pages/about/AboutPage";
 import ServicePage from "@/pages/services/ServicePage";
 import PortfolioPage from "@/pages/portfolio/PortfolioPage";
 import ContactPage from "@/pages/contact/ContactPage";
-import NotFoundPage from "@/pages/contact/ContactPage";
+import NotFoundPage from "@/pages/notfound/NotFoundPage"; // ✅ jangan duplikat ContactPage
 import BlogPage from "@/pages/blog/BlogPage";
 import StudioRedirect from "@/Studio";
 import BlogDetail from "@/pages/blog/BlogDetail";
 
-// Services subpages
-import FotografiPage from "@/pages/Services/FotografiPage";
-import VideoProductionPage from "@/pages/Services/VideoProductionPage";
-import FilmProduction from "@/pages/Services/FilmProduction";
+// Services subpages (cek foldernya huruf besar / kecil!)
+import FotografiPage from "@/pages/services/FotografiPage";
+import VideoProductionPage from "@/pages/services/VideoProductionPage";
+import FilmProduction from "@/pages/services/FilmProduction";
 
 // Dashboard / Login Page
 import LoginPage from "@/dashboard/pages/Login";
@@ -99,6 +99,8 @@ function AnimatedRoutes() {
           }
         />
         <Route path="/studio" element={<StudioRedirect />} />
+
+        {/* Services */}
         <Route
           path="/fotografi"
           element={
@@ -124,7 +126,7 @@ function AnimatedRoutes() {
           }
         />
 
-        {/* Tambahan: Login Dashboard */}
+        {/* Login Dashboard */}
         <Route
           path="/login"
           element={
