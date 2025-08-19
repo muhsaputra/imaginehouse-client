@@ -4,22 +4,22 @@ import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 export default function WhoAreWe() {
   const backgrounds = ["/images/bg16.jpg"];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex] = useState(0);
 
   return (
     <PageTransition>
-      <section className="w-full py-20 px-4 sm:px-6 md:px-12 bg-white text-gray-800">
-        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-12">
+      <section className="w-full py-20 px-4 sm:px-6 md:px-12 bg-white text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+        <div className="max-w-7xl mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-16">
           {/* Kiri - Teks */}
-          <div className="w-full md:max-w-xl text-center md:text-left">
-            <p className="text-xs sm:text-sm font-semibold mb-2 text-gray-600">
+          <div className="w-full md:max-w-xl text-center md:text-left space-y-4">
+            <p className="text-xs sm:text-sm font-semibold text-gray-600 dark:text-gray-400">
               Siapa Kami?
             </p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 leading-snug">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug">
               Apa Itu <br />
               <span className="text-primary">Imagine House?</span>
             </h1>
-            <div className="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8">
+            <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               Imagine House adalah creative agency yang berfokus pada{" "}
               <PointerHighlight
                 rectangleClassName="bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600 leading-loose"
@@ -33,17 +33,16 @@ export default function WhoAreWe() {
               Kami membantu brand, organisasi, dan individu menyampaikan cerita
               mereka secara visual dengan cara yang kreatif, profesional, dan
               berdampak.
-            </div>
+            </p>
           </div>
 
           {/* Kanan - Gambar */}
           <div
-            className="w-full h-[220px] sm:h-[280px] md:w-[500px] md:h-[300px] rounded-xl shadow-md bg-cover bg-center transition-all duration-500"
-            loading="lazy"
+            className="w-full h-[220px] sm:h-[280px] md:w-[500px] md:h-[320px] rounded-2xl shadow-lg bg-cover bg-center transition-transform duration-500 hover:scale-[1.02]"
             style={{
               backgroundImage: `url(${backgrounds[currentIndex]}?v=${currentIndex})`,
             }}
-          ></div>
+          />
         </div>
       </section>
     </PageTransition>
