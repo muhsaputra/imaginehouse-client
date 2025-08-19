@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "@/components/layout/NavigationBar";
 import BreadcrumbSection from "@/components/common/BreadCrumbs";
-import { client } from "@/SanityClient";
+import { client } from "@/sanityClient";
 import { useState, useEffect } from "react";
 import Faqs from "@/components/sections/Faqs";
 import Footer from "@/components/layout/Footer";
