@@ -3,20 +3,18 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  base: "/", // pastikan base path benar untuk Vercel
+  base: "/", // base path aman untuk Vercel
   plugins: [react()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-      "@dashboard": path.resolve(__dirname, "./src/dashboard"),
+      // hapus @dashboard karena folder sudah tidak ada
     },
   },
   server: {
     port: 5173,
     open: true,
     host: true,
-    // ini penting untuk React Router agar tidak 404 saat refresh
-    historyApiFallback: true,
     proxy: {
       "/api": {
         target: "https://imaginehouse-backend-production.up.railway.app",
@@ -28,7 +26,5 @@ export default defineConfig({
   preview: {
     port: 4173,
     host: true,
-    // fallback juga untuk preview mode
-    historyApiFallback: true,
   },
 });
