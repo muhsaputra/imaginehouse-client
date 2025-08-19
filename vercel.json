@@ -1,6 +1,17 @@
 {
   "rewrites": [
     { "source": "/api/(.*)", "destination": "/api/$1" },
+
+    {
+      "source": "/login",
+      "destination": "https://imaginehouse-dashboard.vercel.app/login"
+    },
+
+    {
+      "source": "/dashboard/(.*)",
+      "destination": "https://imaginehouse-dashboard.vercel.app/dashboard/$1"
+    },
+
     { "source": "/(.*)", "destination": "/" }
   ]
 }
