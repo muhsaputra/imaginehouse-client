@@ -1,25 +1,23 @@
 import { useState, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
-import Loading from "@/components/common/Loading";
+import Loading from "@/components/common/Loading.jsx";
 
 // Pages frontend utama
 import HomePage from "@/pages/home/HomePage.jsx";
-import AboutPage from "@/pages/about/AboutPage";
-import ServicePage from "@/pages/services/ServicePage";
-import PortfolioPage from "@/pages/portfolio/PortfolioPage";
-import ContactPage from "@/pages/contact/ContactPage";
-import NotFoundPage from "@/pages/notfound/NotFoundPage"; // ✅ jangan duplikat ContactPage
-import BlogPage from "@/pages/blog/BlogPage";
-import StudioRedirect from "@/Studio";
-import BlogDetail from "@/pages/blog/BlogDetail";
+import AboutPage from "@/pages/about/AboutPage.jsx";
+import ServicePage from "@/pages/services/ServicePage.jsx";
+import PortfolioPage from "@/pages/portfolio/PortfolioPage.jsx";
+import ContactPage from "@/pages/contact/ContactPage.jsx";
+import NotFoundPage from "@/pages/notfound/NotFoundPage.jsx";
+import BlogPage from "@/pages/blog/BlogPage.jsx";
+import StudioRedirect from "@/Studio.jsx";
+import BlogDetail from "@/pages/blog/BlogDetail.jsx";
 
-// Services subpages (cek foldernya huruf besar / kecil!)
-import FotografiPage from "@/pages/services/FotografiPage";
-import VideoProductionPage from "@/pages/services/VideoProductionPage";
-import FilmProduction from "@/pages/services/FilmProduction";
-
-// Dashboard / Login Page
+// Services subpages
+import FotografiPage from "@/pages/services/FotografiPage.jsx";
+import VideoProductionPage from "@/pages/services/VideoProductionPage.jsx";
+import FilmProduction from "@/pages/services/FilmProduction.jsx";
 
 function PageWrapper({ children }) {
   return (
@@ -121,16 +119,6 @@ function AnimatedRoutes() {
           element={
             <PageWrapper>
               <FilmProduction />
-            </PageWrapper>
-          }
-        />
-
-        {/* Login Dashboard */}
-        <Route
-          path="/login"
-          element={
-            <PageWrapper>
-              <LoginPage />
             </PageWrapper>
           }
         />
