@@ -12,6 +12,7 @@ import NotFoundPage from "@/pages/notfound/NotFoundPage.jsx";
 import BlogPage from "@/pages/blog/BlogPage.jsx";
 import StudioRedirect from "@/Studio.jsx";
 import BlogDetail from "@/pages/blog/BlogDetail.jsx";
+import Home from "@/pages/home/home.jsx";
 
 // Services subpages
 import FotografiPage from "@/pages/services/FotografiPage.jsx";
@@ -38,7 +39,14 @@ function AnimatedRoutes() {
     <AnimatePresence mode="wait" initial={false}>
       <Routes location={location} key={location.pathname}>
         {/* Halaman frontend utama */}
-        <Route path="/" element={<PageWrapper></PageWrapper>} />
+        <Route
+          path="/"
+          element={
+            <PageWrapper>
+              <Home />
+            </PageWrapper>
+          }
+        />
         <Route
           path="/about"
           element={
