@@ -5,7 +5,7 @@ import Faqs from "@/components/sections/Faqs";
 import { useEffect, useState } from "react";
 import { Carousel, Card } from "@/components/ui/apple-cards-carousel";
 import { VelocityScroll } from "@/components/magicui/VelocityScroll";
-import { client } from "@/sanityClient";
+import { client } from "../../sanityClient";
 import Footer from "@/components/layout/Footer";
 import Loading from "@/components/common/Loading";
 
