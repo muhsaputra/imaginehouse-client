@@ -1,12 +1,48 @@
-# React + Vite
+# 🌟 Imagine House Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Website resmi **Imagine House**, sebuah creative agency berbasis di **Serang, Banten**.  
+Website ini menampilkan **portofolio, layanan, dan blog** yang dibangun menggunakan **MERN Stack (MongoDB, Express, React, Node.js)** dengan styling **Tailwind CSS** dan deployment ke **Vercel**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Fitur Utama
+- 📸 Showcase portofolio fotografi & videografi  
+- 📰 Blog untuk artikel & update terbaru  
+- 🛠️ Layanan kreatif (prewedding, fashion shoot, dll.)  
+- 📱 Responsive design dengan Tailwind CSS  
+- ⚡ Fast loading + SEO friendly  
+- 🔑 Dashboard Admin untuk mengelola operasional Imagine House, termasuk:
+  - 📂 Project Tracking & Monitoring  
+  - 🗓️ Project Calendar & Timeline  
+  - 💰 Finance Management  
+  - 🤝 Revenue Sharing (Crew & Imagine House)  
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **Frontend**: React + Tailwind CSS + Framer Motion  
+- **Backend**: Node.js + Express.js  
+- **Database**: MongoDB (Mongoose ODM)  
+- **Deployment**: Vercel (Frontend) & [sesuaikan backend: Render / Railway / MongoDB Atlas]  
+
+---
+
+## 📦 Deployment
+- **Frontend**: Vercel → auto deploy dari GitHub  
+- **Backend**: Bisa pakai [Render](https://render.com), [Railway](https://railway.app), atau [MongoDB Atlas]  
+
+---
+
+## 📌 Topics
+`mern-stack` · `react` · `nodejs` · `express` · `mongodb` · `tailwindcss` · `vercel` · `portfolio` · `blog` · `creative-agency` · `imaginehouse`
+
+---
+
+## 👨‍🎨 Tentang Imagine House
+Imagine House adalah **Creative Agency** yang bergerak di bidang **fotografi, videografi, dan produksi kreatif**.  
+Website ini menjadi media showcase karya dan sarana komunikasi dengan klien.
+
+---
+
+## 📄 Lisensi
+MIT License © 2025 Imagine House
