@@ -1,17 +1,24 @@
 {
-  "rewrites": [
-    { "source": "/api/(.*)", "destination": "/api/$1" },
-
+  "redirects": [
     {
       "source": "/login",
-      "destination": "https://imaginehouse-dashboard.vercel.app/"
+      "destination": "https://imaginehouse-dashboard.vercel.app/login",
+      "permanent": false
     },
-
     {
       "source": "/dashboard/(.*)",
-      "destination": "https://imaginehouse-dashboard.vercel.app/dashboard/$1"
+      "destination": "https://imaginehouse-dashboard.vercel.app/dashboard/$1",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
     },
-
-    { "source": "/(.*)", "destination": "/" }
+    {
+      "source": "/(.*)",
+      "destination": "/"
+    }
   ]
 }
