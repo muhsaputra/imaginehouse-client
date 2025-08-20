@@ -10,6 +10,7 @@ import Footer from "@/components/layout/Footer";
 import Loading from "@/components/common/Loading";
 import SkeletonBreadcrumb from "@/components/common/SkeletonBreadcrumb";
 import PortfolioSkeleton from "@/components/common/PortfolioSkeleton";
+import VideoSection from "../../components/sections/VideoSection";
 
 export default function PortfolioPage() {
   const [portfolio, setPortfolio] = useState([]);
@@ -111,21 +112,24 @@ export default function PortfolioPage() {
         <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
           <div className="mb-2">
             <p className="text-sm font-semibold mb-2 text-gray-600">
-              Portfolio Kami
+              Portfolio Foto Kami
             </p>
           </div>
           Jelajahi Karya <span className="text-primary">Kreatif Kami</span>
         </h2>
+
         <Carousel items={cards} />
       </div>
-      <div className="text-primary relative flex w-full flex-col items-center justify-center overflow-hidden">
-        <VelocityScroll>Imagine House</VelocityScroll>
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
-      </div>
+      {/* Video Section */}
+      <VideoSection />
 
       <section className="bg-white dark:bg-gray-900">
         <Fitures />
+        <div className="text-primary relative flex w-full flex-col items-center justify-center overflow-hidden">
+          <VelocityScroll>Imagine House</VelocityScroll>
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+        </div>
         <Faqs />
       </section>
       <Footer />
