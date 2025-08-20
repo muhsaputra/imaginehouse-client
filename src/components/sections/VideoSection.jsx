@@ -31,27 +31,6 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/aj_l_pZZ4pc/maxresdefault.jpg",
     url: "https://www.youtube.com/watch?v=aj_l_pZZ4pc",
   },
-  {
-    id: 5,
-    title: "Advertisement",
-    category: "Commercial",
-    thumbnail: "https://img.youtube.com/vi/aqz-KE-bpKQ/maxresdefault.jpg",
-    url: "https://www.youtube.com/watch?v=aqz-KE-bpKQ",
-  },
-  {
-    id: 6,
-    title: "Tutorial",
-    category: "Education",
-    thumbnail: "https://img.youtube.com/vi/5qap5aO4i9A/maxresdefault.jpg",
-    url: "https://www.youtube.com/watch?v=5qap5aO4i9A",
-  },
-  {
-    id: 7,
-    title: "Travel Vlog",
-    category: "Lifestyle",
-    thumbnail: "https://img.youtube.com/vi/2vjPBrBU-TM/maxresdefault.jpg",
-    url: "https://www.youtube.com/watch?v=2vjPBrBU-TM",
-  },
 ];
 
 export default function VideoSection() {
