@@ -31,6 +31,13 @@ const videos = [
     thumbnail: "https://img.youtube.com/vi/aj_l_pZZ4pc/maxresdefault.jpg",
     url: "https://www.youtube.com/watch?v=aj_l_pZZ4pc",
   },
+  {
+    id: 4,
+    title: "TULAH NGANJI | JUARA 1 NOMINASI PELAJAR | FFBAN 2023",
+    category: "Short Film",
+    thumbnail: "https://img.youtube.com/vi/tLuy90iSpUQ/maxresdefault.jpg",
+    url: "https://www.youtube.com/watch?v=tLuy90iSpUQ",
+  },
 ];
 
 export default function VideoSection() {

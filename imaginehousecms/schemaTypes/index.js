@@ -9,6 +9,7 @@ import portfolioBreadCrumb from './portfolioBreadCrumb'
 import contactpage from './contactpage'
 import blog from './blog'
 import author from './author'
+import comment from './comment' // ⬅️ ini baru
 
 export const schemaTypes = [
   aboutPage,
@@ -22,4 +23,5 @@ export const schemaTypes = [
   contactpage,
   blog,
   author,
+  comment, // ⬅️ masukin ke array
 ]
